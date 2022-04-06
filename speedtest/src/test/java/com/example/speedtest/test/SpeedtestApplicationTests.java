@@ -34,9 +34,7 @@ public class SpeedtestApplicationTests {
 	public void sayHelloTest() throws Exception {
 		RequestBuilder requestBuilder = MockMvcRequestBuilders.get("/").accept(MediaType.ALL_VALUE);
 		MvcResult result = mockMvc.perform(requestBuilder).andReturn();
-		System.out.println(result.getResponse());
 		String expected = "Hello";
-		System.out.println(result.getResponse().getContentAsString());
 		assertEquals(expected, result.getResponse().getContentAsString());
 	}
 	
